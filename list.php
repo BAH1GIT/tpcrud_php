@@ -1,6 +1,5 @@
 <?php
 include_once 'db.php';
-
 $sql = "select * from produit";
 $query = $conn->prepare($sql);
 $query->execute();
