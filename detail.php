@@ -1,5 +1,5 @@
 <?php
-if (isset($_GET['id']) & !empty($_GET['id'])) {
+if (isset($_GET['id']) && !empty($_GET['id'])) {
     include_once("db.php");
     include_once 'header.php';
     $id = strip_tags($_GET['id']);
@@ -8,10 +8,13 @@ if (isset($_GET['id']) & !empty($_GET['id'])) {
     $query->bindValue(':id', $id, PDO::PARAM_INT);
     $query->execute();
     $produit = $query->fetch();
+    if ($produit) {
 } else {
-    echo 'id inexistant !';
+   echo'id manquant';
+//    var_dump($_GET['id']);
+   header('Location:index.php');
 }
-
+}
 ?>
 
 <link rel="stylesheet" href="detail.css">

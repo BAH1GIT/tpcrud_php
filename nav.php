@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+          <a class="nav-link active" aria-current="page" href="form.php" >Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="form.php">Ajouter</a>
+          <button class="nav-link" id="btnInscrire">S'inscrire</button>
         </li>
        
         <li class="nav-item">

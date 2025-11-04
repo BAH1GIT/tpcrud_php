@@ -1,0 +1,16 @@
+.form1{
+   position: absolute;
+  top: -100%;
+  right: 50px;
+  width: 30%;
+  opacity: 0;
+  transition: all 0.8s ease;
+  /* animation fluide */
+  z-index: 100;
+}
+
+.inscription.active {
+  top: 125px;
+  /* position finale sous le header */
+  opacity: 1;
+}

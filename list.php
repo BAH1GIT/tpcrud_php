@@ -9,7 +9,7 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
-<div class="col-6">
+<div class="col-6 mx-auto d-flex align-items-center" style="height: 100vh;">
   <div class=" shadow-lg p-3 mb-5 bg-body-tertiary rounded">
     <div class="card-title mb-3 text-center"><h1>Liste des produits</h1></div>
     <table class="table table-bordered">
