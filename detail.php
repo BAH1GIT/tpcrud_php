@@ -19,7 +19,7 @@ if (isset($_GET['id']) & !empty($_GET['id'])) {
 
 <div class="d-flex justify-content-center align-items-center flex-column" style="min-height: 100vh;">
     <h3 >Carte Detail</h3>
-    <div class="card ">
+    <div class="card  shadow-lg rounded">
         <div class="card__shine"></div>
         <div class="card__glow"></div>
         <div class="card__content">
