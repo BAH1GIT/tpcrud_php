@@ -8,7 +8,7 @@ include_once 'list.php';
 if (
     isset($_POST['nomproduit']) && !empty($_POST['nomproduit']) &&
     isset($_POST['prix']) && !empty($_POST['prix']) &&
-    isset($_POST['description']) && !empty($_POST['description']) 
+    isset($_POST['descriptions']) && !empty($_POST['descriptions']) 
 ){
 
     $nomproduit = strip_tags($_POST['nomproduit']);
@@ -23,12 +23,10 @@ if (
     $query->execute();
 
     header('Location: index.php');
-    // exit;
+    exit;
 }
-
 ?>
-
-<div class="d-flex justify-content-center bg-dark-subtle form1" id="formInscription">
+<div class="d-flex justify-content-center bg-dark-subtle inscription d-none form1" id="formInscription">
 
     <div class="col-6 m-5 shadow-lg p-3 mb-5 bg-body-secondary rounded">
         <form method="post">
@@ -52,20 +50,6 @@ if (
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php 
 include_once 'footer.php';
+?>

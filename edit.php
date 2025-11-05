@@ -7,6 +7,10 @@ if (isset($_GET['id']) & !empty($_GET['id'])) {
     $query->bindValue(':id', $id, PDO::PARAM_INT);
     $query->execute();
     $produit = $query->fetch();
+    if (!$produit) {
+        echo "<p class='text-danger'>Produit introuvable.</p>";
+        exit;
+    }
 } else {
     echo 'id inexistant !';
 }
@@ -21,7 +25,7 @@ if (isset($_GET['id']) & !empty($_GET['id'])) {
     <h1 class="mb-3 mt-3 text-center">Page Editer</h1>
 
     <div class="form_area ">
-        <p class="title">S'inscrire</p>
+        <p class="title">Modifier un produit</p>
         <form action="update.php" method="post">
             <input type="hidden" name="id" value="<?= $produit['id']; ?>">
             <div class="form_group">

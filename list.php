@@ -5,7 +5,9 @@ $query = $conn->prepare($sql);
 $query->execute();
 $result = $query->fetchAll(PDO::FETCH_ASSOC);
 // var_dump($result);
-
+if(empty($result)){
+      echo "<tr><td colspan='5' class='text-center'>Aucun produit trouvé</td></tr>";
+}
 ?>
 
 

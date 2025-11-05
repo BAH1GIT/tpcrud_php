@@ -12,7 +12,8 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 } else {
    echo'id manquant';
 //    var_dump($_GET['id']);
-   header('Location:index.php');
+   header('Location:index.php?error=notfound');
+   exit;
 }
 }
 ?>
